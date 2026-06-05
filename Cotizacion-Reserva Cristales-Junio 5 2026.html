@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propuesta Comercial — Cristales Plaza</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0d14;
+    --bg2: #0e121c;
+    --card: #141a26;
+    --border: #1e2535;
+    --text: #f0f2f5;
+    --text2: #8892a8;
+    --text3: #4a5266;
+    --accent: #00f5ff;
+    --accent2: #e8456e;
+    --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font2: 'DM Serif Display', Georgia, serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { 
+    background: var(--bg); color: var(--text); 
+    font: 400 1rem/1.65 var(--font); 
+    -webkit-font-smoothing: antialiased;
+  }
+  .s { 
+    min-height: 100vh; 
+    padding: 4rem 3rem; 
+    border-bottom: 1px solid var(--border); 
+    display: flex; flex-direction: column; justify-content: center; 
+  }
+  .m { 
+    display: flex; justify-content: space-between; 
+    font: 500 0.6rem/1 var(--mono); letter-spacing: 0.12em; 
+    color: var(--text3); text-transform: uppercase; margin-bottom: 2.5rem; 
+  }
+  .c { background: var(--bg2); }
+  .e { font: 500 0.6rem/1 var(--mono); letter-spacing: 0.2em; text-transform: uppercase; color: var(--text3); margin-bottom: 1.5rem; }
+  .l { position: absolute; top: 2rem; right: 2.5rem; }
+  .l svg { height: 28px; display: block; }
+  .h { font: 400 clamp(2.8rem,6vw,5rem)/1.05 var(--font2); max-width: 800px; margin-bottom: 2rem; }
+  .h em { color: var(--accent); font-style: italic; }
+  .t { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+  .t span { font: 500 0.6rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid var(--text3); padding: 0.25rem 0.7rem; color: var(--text3); border-radius: 999px; }
+  .d { font-size: 0.85rem; color: var(--text2); }
+  .n { font: 700 clamp(3rem,8vw,7rem)/1 var(--mono); color: var(--border); margin-bottom: 0.5rem; }
+  h2 { font: 600 clamp(1.8rem,3.5vw,3rem)/1.1 var(--font); max-width: 700px; margin-bottom: 1rem; letter-spacing: -0.02em; }
+  h2 em { color: var(--accent); font-style: normal; }
+  .sub { font-size: 1rem; color: var(--text2); max-width: 540px; }
+  .g { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1px; background: var(--border); margin-top: 2rem; border-radius: 12px; overflow: hidden; }
+  .g > div { background: var(--card); padding: 1.8rem; }
+  .sym { font: 500 0.65rem/1 var(--mono); letter-spacing: 0.08em; color: var(--accent2); display: block; margin-bottom: 0.8rem; }
+  .g h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .g p, .gc p { font-size: 0.85rem; color: var(--text2); line-height: 1.6; }
+  .ag { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 10px; margin-top: 2rem; }
+  .gc { background: var(--card); border: 1px solid var(--border); padding: 1.8rem; border-radius: 12px; }
+  .b { font: 500 0.55rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid var(--accent); color: var(--accent); padding: 0.2rem 0.6rem; display: inline-block; margin-bottom: 0.8rem; border-radius: 999px; }
+  .gc h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .gc p { font-size: 0.82rem; color: var(--text2); margin-bottom: 0.6rem; }
+  .pr { font: 700 1.3rem/1 var(--font); color: var(--accent); }
+  .ps { margin-top: 2rem; }
+  .pi { border: 1px solid var(--border); margin-bottom: 6px; background: var(--card); border-radius: 6px; overflow: hidden; }
+  .pi.hl { border-color: var(--accent); position: relative; }
+  .pi.hl::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg,var(--accent),var(--accent2)); }
+  .ph { display: flex; justify-content: space-between; align-items: flex-start; padding: 1.2rem 1.5rem; gap: 1.5rem; flex-wrap: wrap; }
+  .pl { font: 500 0.55rem/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text3); margin-bottom: 0.3rem; }
+  .pn { font-size: 1rem; font-weight: 600; }
+  .pd { font-size: 0.82rem; color: var(--text2); margin-top: 0.2rem; }
+  .pv { text-align: right; flex-shrink: 0; }
+  .pa { font: 700 1.6rem/1 var(--font); color: var(--accent); display: block; }
+  .pp { font: 500 0.55rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-top: 0.2rem; }
+  .pi-in { padding: 0 1.5rem 1.2rem; }
+  .pi-in .it { font-size: 0.82rem; color: var(--text2); padding: 0.15rem 0; }
+  .pi-in .it::before { content: '▸ '; color: var(--accent); }
+  .ot { margin-top: 2rem; }
+  .or { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--border); margin-bottom: 1px; border-radius: 6px; overflow: hidden; }
+  .oc { background: var(--card); padding: 1rem 1.3rem; font-size: 0.85rem; color: var(--text2); }
+  .oc.hdr { font: 500 0.55rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); background: var(--bg2); }
+  .oc strong { color: var(--text); font-weight: 600; }
+  .oc .prc { color: var(--accent); font-weight: 600; }
+  .tb { margin-top: 2rem; background: var(--card); border: 1px solid var(--accent); padding: 1.8rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.2rem; border-radius: 12px; }
+  .tl { font: 500 0.6rem/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text3); margin-bottom: 0.4rem; }
+  .ta { font: 700 clamp(1.8rem,4vw,3rem)/1 var(--font); color: var(--accent); }
+  .tn { font-size: 0.8rem; color: var(--text2); max-width: 300px; }
+  .ct { font: 700 clamp(2.2rem,5vw,4.5rem)/1.1 var(--font); margin-bottom: 1.2rem; letter-spacing: -0.02em; }
+  .ct em { color: var(--accent); font-style: normal; }
+  .cc { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.5rem; }
+  .ci { display: flex; flex-direction: column; gap: 0.2rem; }
+  .ci .cl { font: 500 0.55rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); }
+  .ci .cv { font-size: 0.95rem; }
+  .cn { font-size: 0.85rem; color: var(--text2); max-width: 520px; margin-top: 1.2rem; padding: 1rem; border-left: 2px solid var(--accent2); background: oklch(58% 0.24 350 / 0.06); border-radius: 0 6px 6px 0; }
+  .nav { position: fixed; right: 1.2rem; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 0.5rem; z-index: 100; }
+  .nav a { width: 7px; height: 7px; background: var(--text3); border-radius: 50%; display: block; transition: all 0.2s; }
+  .nav a:hover, .nav a.active { background: var(--accent); box-shadow: 0 0 10px oklch(70% 0.22 190 / 0.5); transform: scale(1.3); }
+  @media (max-width:640px) { .nav { display:none; } .or { grid-template-columns:1fr; } .ph { flex-direction:column; } .pv { text-align:left; } .tb { flex-direction:column; } .s { padding:2.5rem 1.5rem; } }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a href="#s1" class="active"></a>
+  <a href="#s2"></a>
+  <a href="#s3"></a>
+  <a href="#s4"></a>
+  <a href="#s5"></a>
+  <a href="#s6"></a>
+  <a href="#s7"></a>
+  <a href="#s8"></a>
+  <a href="#s9"></a>
+</div>
+
+<!-- 01 -->
+<section id="s1" class="s c">
+  <div class="l">
+    <svg viewBox="0 0 370 56" width="370" height="56">
+      <defs><filter id="g"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+      <circle cx="18" cy="28" r="5.5" fill="#00F5FF" filter="url(#g)"/>
+      <circle cx="18" cy="28" r="5.5" fill="#00F5FF"/>
+      <text x="36" y="36" font-family="'Plus Jakarta Sans',system-ui,sans-serif" font-size="22" letter-spacing="-0.4">
+        <tspan font-weight="700" fill="#FFFFFF">SM</tspan><tspan font-weight="700" fill="#E8456E"> Business</tspan><tspan font-weight="300" fill="#FFFFFF" fill-opacity="0.92"> Solutions</tspan>
+      </text>
+    </svg>
+  </div>
+  <div class="e">SM Business Solutions · Propuesta Comercial</div>
+  <div class="h">Ecosistema digital para <br><em>Cristales Plaza.</em></div>
+  <div class="t"><span>Hosting</span><span>Migración</span><span>Correo Corporativo</span><span>Estrategia de Contenidos</span><span>Cali · Colombia</span></div>
+  <div class="d">Preparada para: Sr. Alejandro Benavides · Reserva Cristales · Santiago de Cali, junio 5 de 2026</div>
+</section>
+
+<!-- 02 -->
+<section id="s2" class="s">
+  <div class="m"><span>02 · El contexto</span><span>02 — 09</span></div>
+  <div class="n">02</div>
+  <h2>Dos sitios web. <br><em>Una sola solución.</em></h2>
+  <div class="sub">Con base en las dos reuniones sostenidas con el señor Alejandro Benavides, identificamos cuatro necesidades concretas que esta propuesta resuelve de forma integrada.</div>
+  <div class="g" style="margin-top:2rem;">
+    <div><span class="sym">▦ 01 · SITIOS WEB</span><h3>reservacristales.com</h3><p>Sitio de reservas activo que requiere continuidad de hosting y migración a nuevo proveedor.</p></div>
+    <div><span class="sym">▦ 02 · SITIOS WEB</span><h3>cristalesplaza.com</h3><p>Sitio corporativo principal. Migración incluida junto con los 4 dominios activos hasta abril 2027.</p></div>
+    <div><span class="sym">▦ 03 · COMUNICACIÓN</span><h3>Correo Corporativo</h3><p>Cuenta gerencial bajo Office 365 Business o plan de hosting. Dos opciones según necesidad de almacenamiento.</p></div>
+    <div><span class="sym">▦ 04 · VISIBILIDAD</span><h3>Estrategia de Contenidos</h3><p>Plan editorial para ambos sitios, optimizado para motores de búsqueda y tráfico orgánico sostenido.</p></div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section id="s3" class="s">
+  <div class="m"><span>03 · Servicios incluidos</span><span>03 — 09</span></div>
+  <h2>Lo que incluye <br><em>cada servicio.</em></h2>
+  <div class="ag">
+    <div class="gc"><span class="b">Hosting Anual</span><h3>Servicio de Hosting</h3><p>Plan profesional con panel cPanel, certificado SSL, almacenamiento SSD, soporte técnico y backups automáticos. Capacidad suficiente para los 2 sitios web y los 4 dominios vinculados.</p><p style="font-size:0.78rem;color:var(--text3);font-family:var(--mono);">▸ SSL incluido · Backups semanales · Uptime 99.9%</p></div>
+    <div class="gc"><span class="b">Pago Único</span><h3>Migración de Sitios y Dominios</h3><p>Traslado completo de los 4 dominios (cristalesplaza.net · .com · .info · reservadecristales.com) y los 2 sitios web al nuevo hosting. Tiempo estimado: 24 a 48 horas sin interrupción del servicio.</p><p style="font-size:0.78rem;color:var(--text3);font-family:var(--mono);">▸ Sin downtime · Configuración DNS incluida</p></div>
+    <div class="gc"><span class="b">Mensual</span><h3>Estrategia de Contenidos SEO</h3><p>Publicaciones optimizadas con palabras clave para ambos sitios web. Incluye investigación de keywords, calendario editorial, redacción técnica y reporte mensual de tráfico. Mínimo 3 meses para resultados medibles.</p><p style="font-size:0.78rem;color:var(--text3);font-family:var(--mono);">▸ 2 sitios · Keywords · Reportes · 3 meses mínimo</p></div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section id="s4" class="s">
+  <div class="m"><span>04 · Precios</span><span>04 — 09</span></div>
+  <h2>Valores por <br><em>servicio.</em></h2>
+  <div class="ps">
+    <div class="pi">
+      <div class="ph"><div><div class="pl">Hosting · Anual por sitio</div><div class="pn">Servicio de Hosting Web</div><div class="pd">Para los 2 sitios web: reservacristales.com y cristalesplaza.com</div></div><div class="pv"><span class="pa">$520.000</span><div class="pp">Total año · $260K por sitio</div></div></div>
+      <div class="pi-in"><div class="it">SSL, backups automáticos, cPanel y soporte técnico incluidos</div><div class="it">Capacidad para alojar los 4 dominios vinculados</div></div>
+    </div>
+    <div class="pi">
+      <div class="ph"><div><div class="pl">Pago Único</div><div class="pn">Migración de Sitios Web y Dominios</div><div class="pd">4 dominios + 2 sitios web · 24 a 48 horas sin interrupción</div></div><div class="pv"><span class="pa">$400.000</span><div class="pp">Valor único · No se repite</div></div></div>
+      <div class="pi-in"><div class="it">cristalesplaza.net · .com · .info · reservadecristales.com</div><div class="it">Configuración DNS y redirecciones incluidas</div></div>
+    </div>
+    <div class="pi hl">
+      <div class="ph"><div><div class="pl">Mensual · Mínimo 3 meses</div><div class="pn">Estrategia de Contenidos SEO</div><div class="pd">Para ambos sitios web — keywords, redacción y reporte mensual</div></div><div class="pv"><span class="pa">$800.000</span><div class="pp">Por mes · $400K x sitio</div></div></div>
+      <div class="pi-in"><div class="it">Investigación de palabras clave por segmento de negocio</div><div class="it">Publicaciones optimizadas y calendario editorial</div><div class="it">Reporte mensual de tráfico orgánico y posicionamiento</div><div class="it">Los motores de búsqueda reconocen el contenido en 60–90 días</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section id="s5" class="s">
+  <div class="m"><span>05 · Correo corporativo</span><span>05 — 09</span></div>
+  <h2>Correo corporativo: <br><em>dos opciones.</em></h2>
+  <div class="sub" style="margin-bottom:0.5rem;">Según las necesidades de almacenamiento y flujo de trabajo de gerencia, recomendamos evaluar estas alternativas:</div>
+  <div class="ot">
+    <div class="or"><div class="oc hdr">Opción</div><div class="oc hdr">Almacenamiento</div><div class="oc hdr">Valor Mensual</div></div>
+    <div class="or"><div class="oc"><strong>Hosting incluido</strong><br><span style="font-size:0.75rem;">Usa el espacio del plan de hosting. No recomendado para uso intensivo.</span></div><div class="oc">2 GB compartidos</div><div class="oc prc"><strong>Sin costo adicional</strong></div></div>
+    <div class="or"><div class="oc"><strong>Plan básico dedicado</strong><br><span style="font-size:0.75rem;">Cuenta independiente, ideal para uso moderado.</span></div><div class="oc">5 GB dedicados</div><div class="oc prc"><strong>$9.000 / mes</strong></div></div>
+    <div class="or" style="background:oklch(70% 0.22 190 / 0.06);"><div class="oc"><strong>Plan profesional</strong> ★<br><span style="font-size:0.75rem;">Recomendado para gerencia con flujo alto de mensajes.</span></div><div class="oc">30 GB dedicados</div><div class="oc prc"><strong>$19.000 / mes</strong></div></div>
+  </div>
+  <p style="font-size:0.8rem;color:var(--text3);margin-top:1.2rem;font-family:var(--mono);">▸ El valor del correo no está incluido en el resumen de propuesta hasta que la empresa confirme la opción preferida.</p>
+</section>
+
+<!-- 06 -->
+<section id="s6" class="s">
+  <div class="m"><span>06 · Servicios complementarios</span><span>06 — 09</span></div>
+  <div class="n">+</div>
+  <h2>Servicios que pueden <br><em>potenciar el resultado.</em></h2>
+  <div class="sub">Más allá de lo cotizado, estos servicios de SM Business Solutions se activan cuando Cristales Plaza quiera dar el siguiente paso en visibilidad y captación digital.</div>
+  <div class="ag">
+    <div class="gc"><span class="b">Mayor demanda</span><h3>Publicidad Digital</h3><p>Gestión de pauta en Google Ads y Meta Ads. Honorarios de agencia, la inversión publicitaria la paga el cliente directamente.</p><div class="pr">$800K – $3M</div><p style="font-size:0.75rem;color:var(--text3);margin-top:0.2rem;font-family:var(--mono);">/ mes · según nivel de gestión</p></div>
+    <div class="gc"><span class="b">Recomendado</span><h3>Gestión de Redes Sociales</h3><p>Community management, diseño de piezas, programación de posts y respuesta de mensajes para 2–4 redes.</p><div class="pr">$800K – $5M</div><p style="font-size:0.75rem;color:var(--text3);margin-top:0.2rem;font-family:var(--mono);">/ mes · plan básico a premium + video</p></div>
+    <div class="gc"><span class="b">SEO Avanzado</span><h3>SEO / SEM + Analítica</h3><p>Optimización técnica, reportes de métricas y estrategia de tráfico orgánico más allá de la producción de contenido.</p><div class="pr">$800K – $4M</div><p style="font-size:0.75rem;color:var(--text3);margin-top:0.2rem;font-family:var(--mono);">/ mes · básico a completo con reportes</p></div>
+    <div class="gc"><span class="b">Branding</span><h3>Identidad Visual</h3><p>Logo, paleta, tipografía y manual de marca. Cobro por proyecto único.</p><div class="pr">$1.5M – $15M</div><p style="font-size:0.75rem;color:var(--text3);margin-top:0.2rem;font-family:var(--mono);">Proyecto único · básico a rebranding empresarial</p></div>
+    <div class="gc"><span class="b">Automatización</span><h3>Email Marketing</h3><p>Flujos automatizados, secuencias de bienvenida, newsletters y segmentación de base de datos.</p><div class="pr">$600K – $3M</div><p style="font-size:0.75rem;color:var(--text3);margin-top:0.2rem;font-family:var(--mono);">/ mes · básico a flujos completos</p></div>
+    <div class="gc"><span class="b">Más vendido</span><h3>Pack Crecimiento Digital</h3><p>Redes (3–4) + Google/Meta Ads + email marketing + SEO básico + reportes mensuales. Solución integral.</p><div class="pr">$4.5M – $7M</div><p style="font-size:0.75rem;color:var(--text3);margin-top:0.2rem;font-family:var(--mono);">/ mes · paquete todo incluido</p></div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section id="s7" class="s">
+  <div class="m"><span>07 · Resumen de inversión</span><span>07 — 09</span></div>
+  <h2>Resumen de la <br><em>propuesta.</em></h2>
+  <div class="ps">
+    <div class="pi"><div class="ph"><div><div class="pl">Anual</div><div class="pn">Hosting (2 sitios web)</div></div><div class="pv"><span class="pa">$520.000</span><div class="pp">$260K por sitio × 2</div></div></div></div>
+    <div class="pi"><div class="ph"><div><div class="pl">Pago Único</div><div class="pn">Migración sitios web y dominios</div></div><div class="pv"><span class="pa">$400.000</span><div class="pp">4 dominios + 2 sitios</div></div></div></div>
+    <div class="pi hl"><div class="ph"><div><div class="pl">Mensual</div><div class="pn">Estrategia de Contenidos SEO</div></div><div class="pv"><span class="pa">$800.000</span><div class="pp">Por mes · mínimo 3 meses</div></div></div></div>
+  </div>
+  <div class="tb">
+    <div><div class="tl">Inversión mensual de Contenidos + Año de Hosting</div><div class="ta">$1.320.000</div><p style="font-size:0.8rem;color:var(--text2);margin-top:0.2rem;">$520K hosting + $800K contenidos</p></div>
+    <div style="text-align:right;"><div class="tl">Pago único</div><div style="font:700 clamp(1.3rem,2.5vw,2rem)/1 var(--font);color:var(--accent2);">+ $400.000</div><div class="tn" style="text-align:right;">Migración de sitios y dominios</div></div>
+  </div>
+  <p style="font-size:0.8rem;color:var(--text3);margin-top:0.8rem;font-family:var(--mono);">▸ Facturación mensual | Incluye hosting de 2 sitios + estrategia de contenidos SEO</p>
+</section>
+
+<!-- 08 -->
+<section id="s8" class="s">
+  <div class="m"><span>08 · Términos y condiciones</span><span>08 — 09</span></div>
+  <h2>Términos de la <br><em>propuesta.</em></h2>
+  <div class="ag">
+    <div class="gc"><h3>Vigencia</h3><p>Esta cotización tiene una validez de 15 días calendario a partir de la fecha de emisión. Pasado este plazo, los precios están sujetos a reajuste según tarifas vigentes.</p></div>
+    <div class="gc"><h3>Forma de pago</h3><p>50% anticipo para iniciar los servicios contratados. 50% contra entrega y verificación de cada entregable. Transferencia, consignación bancaria o cheque.</p></div>
+    <div class="gc"><h3>Tiempos de entrega</h3><p>Migración y configuración: 5 a 8 días hábiles. Estrategia de contenidos SEO: primeras publicaciones en semana 1, resultados medibles a partir del mes 2.</p></div>
+    <div class="gc"><h3>Soporte incluido</h3><p>30 días de soporte post-entrega para ajustes menores, resolución de dudas operativas y verificación de funcionamiento de los servicios migrados.</p></div>
+    <div class="gc"><h3>Renovación</h3><p>El servicio de hosting se renueva anualmente. La estrategia de contenidos requiere un compromiso mínimo de 3 meses para garantizar resultados efectivos.</p></div>
+    <div class="gc"><h3>Confidencialidad</h3><p>Toda la información compartida entre las partes para el desarrollo de esta propuesta se considera confidencial y de uso exclusivo para los fines aquí descritos.</p></div>
+  </div>
+</section>
+
+<!-- 09 -->
+<section id="s9" class="s c">
+  <div class="m"><span>09 · Contacto</span><span>09 — 09</span></div>
+  <div class="ct">Hagamos realidad este <br><em>ecosistema digital.</em></div>
+  <div class="sub">Estamos listos para empezar. Una vez confirmada la propuesta, asignamos equipo y arrancamos en 48 horas.</div>
+  <div class="cc">
+    <div class="ci"><span class="cl">Teléfono</span><span class="cv">+57 311 375 2506</span></div>
+    <div class="ci"><span class="cl">Correo</span><span class="cv">contacto@smagencia.com.co</span></div>
+    <div class="ci"><span class="cl">Web</span><span class="cv">smagencia.com.co</span></div>
+    <div class="ci"><span class="cl">Dirección</span><span class="cv">Cali, Colombia</span></div>
+  </div>
+  <div class="cn">
+    <strong style="color:var(--accent);">¿Listo para empezar?</strong><br>
+    Confirma esta propuesta y en 48 horas iniciamos con la migración y configuración de tu ecosistema digital.
+  </div>
+  <p style="font-size:0.75rem;color:var(--text3);margin-top:2rem;font-family:var(--mono);">SM Business Solutions S.A.S. · NIT 901.XXX.XXX · Cali, Colombia · 2026</p>
+</section>
+
+</body>
+</html>
